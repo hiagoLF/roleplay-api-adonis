@@ -24,6 +24,4 @@ Route.get('/', async () => {
   return { hello: 'world' }
 })
 
-Route.post('/users', async ({ response }) => {
-  return response.created({})
-})
+Route.post('/users', 'UsersControllers.store')
